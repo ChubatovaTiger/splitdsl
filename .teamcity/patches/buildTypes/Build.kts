@@ -1,6 +1,7 @@
 package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.Swabra
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.swabra
 import jetbrains.buildServer.configs.kotlin.v2019_2.ui.*
 
@@ -13,6 +14,8 @@ changeBuildType(RelativeId("Build")) {
     features {
         add {
             swabra {
+                lockingProcesses = Swabra.LockingProcessPolicy.REPORT
+                verbose = true
             }
         }
     }
