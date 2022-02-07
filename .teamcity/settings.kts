@@ -59,6 +59,7 @@ object B : BuildType({
         }
         merge {
             branchFilter = "sdfsdf"
+            commitMessage = "Merge branch"
         }
     }
 })
