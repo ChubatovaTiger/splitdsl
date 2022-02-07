@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.merge
+import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -27,6 +28,8 @@ version = "2021.2"
 
 project {
 
+    vcsRoot(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
+
     buildType(B)
 }
 
@@ -35,6 +38,7 @@ object B : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
+        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
     }
 
     features {
@@ -48,4 +52,10 @@ object B : BuildType({
             branchFilter = "sdfsdf"
         }
     }
+})
+
+object HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup : GitVcsRoot({
+    name = "https://github.com/ChubatovaTiger/ChubatovaGradleTestsBackup"
+    url = "https://github.com/ChubatovaTiger/ChubatovaGradleTestsBackup"
+    branch = "refs/heads/master"
 })
