@@ -38,6 +38,10 @@ object B_3 : BuildType({
     id("B")
     name = "b"
 
+    params {
+        param("a", "a")
+    }
+
     vcs {
         root(DslContext.settingsRoot)
         root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
