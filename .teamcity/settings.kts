@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.merge
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -34,5 +35,11 @@ object B : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
+    }
+
+    features {
+        merge {
+            branchFilter = "sf"
+        }
     }
 })
