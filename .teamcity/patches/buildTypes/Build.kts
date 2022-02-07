@@ -16,5 +16,11 @@ changeBuildType(RelativeId("Build")) {
                 branchFilter = "sss"
             }
         }
+        add {
+            feature {
+                type = "splitTests"
+                param("numberOfParts", "3")
+            }
+        }
     }
 }
