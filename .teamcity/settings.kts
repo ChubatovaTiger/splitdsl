@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.merge
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.gradle
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
 /*
@@ -39,6 +40,13 @@ object B : BuildType({
     vcs {
         root(DslContext.settingsRoot)
         root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
+    }
+
+    steps {
+        gradle {
+            tasks = "clean build"
+            gradleWrapperPath = ""
+        }
     }
 
     features {
