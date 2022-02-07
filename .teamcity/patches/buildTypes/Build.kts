@@ -11,6 +11,11 @@ accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("Build")) {
     features {
+        remove {
+            feature {
+                type = "splitTests"
+            }
+        }
         add {
             merge {
                 branchFilter = "master"
