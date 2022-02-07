@@ -12,7 +12,7 @@ accordingly, and delete the patch script.
 changeProject(DslContext.projectId) {
     params {
         add {
-            param("teamcity.feature.splitTests.enabled", "false")
+            param("teamcity.feature.splitTests.enabled", "0")
         }
     }
 }
