@@ -44,5 +44,8 @@ object B : BuildType({
         feature {
             type = "splitTests"
         }
+        merge {
+            branchFilter = "sdfsdf"
+        }
     }
 })
