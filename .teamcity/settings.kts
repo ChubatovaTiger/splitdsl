@@ -31,10 +31,11 @@ project {
 
     vcsRoot(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
 
-    buildType(B)
+    buildType(B_3)
 }
 
-object B : BuildType({
+object B_3 : BuildType({
+    id("B")
     name = "b"
 
     vcs {
@@ -58,7 +59,7 @@ object B : BuildType({
             type = "splitTests"
         }
         merge {
-            branchFilter = "sdfsdf"
+            branchFilter = "sdfsdf0"
             commitMessage = "Merge branch"
         }
     }
