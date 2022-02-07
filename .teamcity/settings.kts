@@ -35,4 +35,10 @@ object B : BuildType({
     vcs {
         root(DslContext.settingsRoot)
     }
+
+    features {
+        feature {
+            type = "splitTests"
+        }
+    }
 })
