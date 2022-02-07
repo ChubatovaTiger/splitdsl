@@ -62,6 +62,10 @@ object B_3 : BuildType({
             branchFilter = "sdfsdf0"
             commitMessage = "Merge branch"
         }
+        merge {
+            branchFilter = "lkjlkj"
+            commitMessage = "Merge branch"
+        }
     }
 })
 
